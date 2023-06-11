@@ -5,6 +5,9 @@ const NavBar = () => {
     const user = 1;
     const navOptions = <>
         <li><Link to="/">Home</Link></li> 
+        <li><Link to="/">Instructors</Link></li> 
+        <li><Link to="/">Classes</Link></li> 
+        <li><Link to="/">Dashboard</Link></li> 
         <li><Link to="/login">LogOut</Link></li>
         <li><Link to="/login">Login</Link></li>
        
@@ -22,7 +25,7 @@ const NavBar = () => {
                         </ul>
                     </div>
                     <img className='w-10' src={logo} alt="" />
-                    <a className="btn btn-ghost normal-case text-xl  hover:bg-[#173931]">Farmhouse Academy</a>
+                    <a className="btn btn-ghost normal-case text-xl  hover: ">Farmhouse Academy</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
