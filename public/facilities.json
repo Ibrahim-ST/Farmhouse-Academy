@@ -1,0 +1,52 @@
+[
+  {
+    "_id": "Fac_1aB23",
+    "name": "Football Field",
+    "image": ""
+  },
+  {
+    "_id": "Fac_4CdeF5",
+    "name": "Training Gym",
+    "image": ""
+  },
+  {
+    "_id": "Fac_7GhiJ8",
+    "name": "Locker Rooms",
+    "image": ""
+  },
+  {
+    "_id": "Fac_9KlmN10",
+    "name": "Cafeteria",
+    "image": ""
+  },
+  {
+    "_id": "Fac_11OpqR12",
+    "name": "Meeting Rooms",
+    "image": ""
+  },
+  {
+    "_id": "Fac_13StuV14",
+    "name": "Medical Room",
+    "image": ""
+  },
+  {
+    "_id": "Fac_15WxyZ16",
+    "name": "Outdoor Track",
+    "image": ""
+  },
+  {
+    "_id": "Fac_17AbCd18",
+    "name": "Indoor Court",
+    "image": ""
+  },
+  {
+    "_id": "Fac_19EfGh20",
+    "name": "Fitness Studio",
+    "image": ""
+  },
+  {
+    "_id": "Fac_21IjKl22",
+    "name": "Sports Shop",
+    "image": ""
+  }
+]

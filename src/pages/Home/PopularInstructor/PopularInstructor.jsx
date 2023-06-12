@@ -10,8 +10,8 @@ const PopularInstructor = () => {
         fetch('instructors.json')
         .then(res=> res.json())
         .then(data => {
+            console.log(data)
             setInstructors(data);
-
         })
     }, [])
     console.log(instructors);
@@ -24,7 +24,7 @@ const PopularInstructor = () => {
             heading="Popular Instructors"
             ></SectionTitle>
 
-            <div className="grid md:grid-cols-3 gap-4 items-center justify-center">
+            <div className="grid md:grid-cols-3 gap-4 items-center justify-items-center">
                 {
                     popular?.map(instructor => <InstructorCard
                         key={instructor._id}

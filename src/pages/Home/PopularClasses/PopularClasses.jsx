@@ -20,7 +20,7 @@ const PopularClasses = () => {
             heading="Popular Classes"
             ></SectionTitle>
 
-            <div className="grid md:grid-cols-3 gap-4 items-center justify-center">
+            <div className="grid md:grid-cols-3 gap-4 items-center justify-items-center">
                 {
                     popularClass?.map(classes => <ClassCard
                         key={classes._id}
