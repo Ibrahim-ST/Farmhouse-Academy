@@ -1,14 +1,18 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
+import Facilities from '../Facilities/Facilities';
 import Gallery from '../Gallery/Gallery';
+import PopularClasses from '../PopularClasses/PopularClasses';
 import PopularInstructor from '../PopularInstructor/PopularInstructor';
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <Gallery></Gallery>
             <PopularInstructor></PopularInstructor>
+            <PopularClasses></PopularClasses>
+            <Gallery></Gallery>
+            <Facilities></Facilities>
         </div>
     );
 };

@@ -21,7 +21,7 @@ const Banner = () => {
     </>
   );
   return (
-    <div className="mb-44">
+    <div className="">
       <Carousel>
         <div>
           <img className="" src={img1} />

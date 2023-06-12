@@ -1,0 +1,92 @@
+[
+  {
+    "_id": "Cls_1aB23",
+    "class_name": "Beginner's Football",
+    "instructor_name": "John Smith",
+    "image": "https://www.chi.ac.uk/app/uploads/2022/03/21-Astro-Football_0043_21-Astro-Football-35-1024x576.jpg",
+    "category": "Popular",
+    "number_of_classes": 25,
+    "email": "john.smith@example.com"
+  },
+  {
+    "_id": "Cls_4CdeF5",
+    "class_name": "Intermediate Football",
+    "instructor_name": "Emma Johnson",
+    "image": "https://www.chi.ac.uk/app/uploads/2022/03/21-Astro-Football_0043_21-Astro-Football-35-1024x576.jpg",
+    "category": "Popular",
+    "number_of_classes": 20,
+    "email": "emma.johnson@example.com"
+  },
+  {
+    "_id": "Cls_7GhiJ8",
+    "class_name": "Advanced Football",
+    "instructor_name": "David Williams",
+    "image": "https://www.chi.ac.uk/app/uploads/2022/03/21-Astro-Football_0043_21-Astro-Football-35-1024x576.jpg",
+    "category": "Popular",
+    "number_of_classes": 22,
+    "email": "david.williams@example.com"
+  },
+  {
+    "_id": "Cls_9KlmN10",
+    "class_name": "Youth Football",
+    "instructor_name": "Sarah Davis",
+    "image": "https://www.chi.ac.uk/app/uploads/2022/03/21-Astro-Football_0043_21-Astro-Football-35-1024x576.jpg",
+    "category": "Popular",
+    "number_of_classes": 19,
+    "email": "sarah.davis@example.com"
+  },
+  {
+    "_id": "Cls_11OpqR12",
+    "class_name": "Beginner's Football",
+    "instructor_name": "Michael Brown",
+    "image": "https://www.chi.ac.uk/app/uploads/2022/03/21-Astro-Football_0043_21-Astro-Football-35-1024x576.jpg",
+    "category": "Popular",
+    "number_of_classes": 24,
+    "email": "michael.brown@example.com"
+  },
+  {
+    "_id": "Cls_13StuV14",
+    "class_name": "Intermediate Football",
+    "instructor_name": "Emily Wilson",
+    "image": "https://www.chi.ac.uk/app/uploads/2022/03/21-Astro-Football_0043_21-Astro-Football-35-1024x576.jpg",
+    "category": "regular",
+    "number_of_classes": 14,
+    "email": "emily.wilson@example.com"
+  },
+  {
+    "_id": "Cls_15WxyZ16",
+    "class_name": "Advanced Football",
+    "instructor_name": "Daniel Taylor",
+    "image": "https://www.chi.ac.uk/app/uploads/2022/03/21-Astro-Football_0043_21-Astro-Football-35-1024x576.jpg",
+    "category": "regular",
+    "number_of_classes": 10,
+    "email": "daniel.taylor@example.com"
+  },
+  {
+    "_id": "Cls_17AbCd18",
+    "class_name": "Youth Football",
+    "instructor_name": "Olivia Anderson",
+    "image": "https://www.chi.ac.uk/app/uploads/2022/03/21-Astro-Football_0043_21-Astro-Football-35-1024x576.jpg",
+    "category": "Popular",
+    "number_of_classes": 21,
+    "email": "olivia.anderson@example.com"
+  },
+  {
+    "_id": "Cls_19EfGh20",
+    "class_name": "Beginner's Football",
+    "instructor_name": "Christopher Lee",
+    "image": "https://www.chi.ac.uk/app/uploads/2022/03/21-Astro-Football_0043_21-Astro-Football-35-1024x576.jpg",
+    "category": "regular",
+    "number_of_classes": 12,
+    "email": "christopher.lee@example.com"
+  },
+  {
+    "_id": "Cls_21IjKl22",
+    "class_name": "Intermediate Football",
+    "instructor_name": "Sophia Green",
+    "image": "https://www.chi.ac.uk/app/uploads/2022/03/21-Astro-Football_0043_21-Astro-Football-35-1024x576.jpg",
+    "category": "regular",
+    "number_of_classes": 14,
+    "email": "sophia.green@example.com"
+  }
+]

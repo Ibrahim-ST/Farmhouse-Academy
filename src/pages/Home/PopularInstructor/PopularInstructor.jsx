@@ -19,7 +19,7 @@ const PopularInstructor = () => {
     console.log(popular)
     
     return (
-        <div>
+        <div className='my-4'>
             <SectionTitle
             heading="Popular Instructors"
             ></SectionTitle>
