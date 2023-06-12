@@ -1,0 +1,82 @@
+[
+  {
+    "_id": "1",
+    "name": "John Smith",
+    "image": "https://i.ibb.co/WnVW32R/5.jpg",
+    "category": "Popular",
+    "instructor_info": "John is a versatile instructor with expertise in various fitness disciplines, including strength training, cardio, and functional workouts. He tailors his sessions to challenge participants of all fitness levels, helping them improve their overall performance.",
+    "num_students": 500
+  },
+  {
+    "_id": "2",
+    "name": "Alice Johnson",
+    "image": "https://i.ibb.co/WnVW32R/5.jpg",
+    "category": "Popular",
+    "instructor_info": "Alice is a versatile instructor with expertise in various fitness disciplines, including strength training, cardio, and functional workouts. He tailors his sessions to challenge participants of all fitness levels, helping them improve their overall performance.",
+    "num_students": 800
+  },
+  {
+    "_id": "3",
+    "name": "David Williams",
+    "image": "https://i.ibb.co/WnVW32R/5.jpg",
+    "category": "regular",
+    "instructor_info": "David is a versatile instructor with expertise in various fitness disciplines, including strength training, cardio, and functional workouts. He tailors his sessions to challenge participants of all fitness levels, helping them improve their overall performance.",
+    "num_students": 1200
+  },
+  {
+    "_id": "4",
+    "name": "Sarah Davis",
+    "image": "https://i.ibb.co/WnVW32R/5.jpg",
+    "category": "Popular",
+    "instructor_info": "Sarah is a versatile instructor with expertise in various fitness disciplines, including strength training, cardio, and functional workouts. He tailors his sessions to challenge participants of all fitness levels, helping them improve their overall performance.",
+    "num_students": 1000
+  },
+  {
+    "_id": "5",
+    "name": "Michael Brown",
+    "image": "https://i.ibb.co/WnVW32R/5.jpg",
+    "category": "regular",
+    "instructor_info": "Michael is a versatile instructor with expertise in various fitness disciplines, including strength training, cardio, and functional workouts. He tailors his sessions to challenge participants of all fitness levels, helping them improve their overall performance.",
+    "num_students": 600
+  },
+  {
+    "_id": "6",
+    "name": "Emily Wilson",
+    "image": "https://i.ibb.co/WnVW32R/5.jpg",
+    "category": "Popular",
+    "instructor_info": "Emily is a versatile instructor with expertise in various fitness disciplines, including strength training, cardio, and functional workouts. He tailors his sessions to challenge participants of all fitness levels, helping them improve their overall performance.",
+    "num_students": 300
+  },
+  {
+    "_id": "7",
+    "name": "Daniel Anderson",
+    "image": "https://i.ibb.co/WnVW32R/5.jpg",
+    "category": "regular",
+    "instructor_info": "Daniel is a versatile instructor with expertise in various fitness disciplines, including strength training, cardio, and functional workouts. He tailors his sessions to challenge participants of all fitness levels, helping them improve their overall performance.",
+    "num_students": 400
+  },
+  {
+    "_id": "8",
+    "name": "Olivia Thompson",
+    "image": "https://i.ibb.co/WnVW32R/5.jpg",
+    "category": "regular",
+    "instructor_info": "Olivia is a versatile instructor with expertise in various fitness disciplines, including strength training, cardio, and functional workouts. He tailors his sessions to challenge participants of all fitness levels, helping them improve their overall performance.",
+    "num_students": 700
+  },
+  {
+    "_id": "9",
+    "name": "James Taylor",
+    "image": "https://i.ibb.co/WnVW32R/5.jpg",
+    "category": "Popular",
+    "instructor_info": "James is a versatile instructor with expertise in various fitness disciplines, including strength training, cardio, and functional workouts. He tailors his sessions to challenge participants of all fitness levels, helping them improve their overall performance.",
+    "num_students": 900
+  },
+  {
+    "_id": "10",
+    "name": "Sophia Martinez",
+    "image": "https://i.ibb.co/WnVW32R/5.jpg",
+    "category": "Popular",
+    "instructor_info": "Sophia is a versatile instructor with expertise in various fitness disciplines, including strength training, cardio, and functional workouts. He tailors his sessions to challenge participants of all fitness levels, helping them improve their overall performance.",
+    "num_students": 550
+  }
+]
