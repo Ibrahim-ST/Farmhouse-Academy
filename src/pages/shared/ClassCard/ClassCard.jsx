@@ -15,7 +15,7 @@ const ClassCard = ({classes}) => {
         <p>{instructor_name}</p>
         <p>{instructor_info}</p>
         <div className="card-actions ">
-          <div className="badge badge-info py-5 text-lg">Number of classes: {number_of_classes}</div>          
+          <div className="badge badge-info  bg-[#28A745] text-white py-5 text-lg">Number of classes: {number_of_classes}</div>          
         </div>
       </div>
     </div>

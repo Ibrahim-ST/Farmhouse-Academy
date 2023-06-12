@@ -14,7 +14,7 @@ const InstructorCard = ({ instructor }) => {
         </h2>
         <p>{instructor_info}</p>
         <div className="card-actions ">
-          <div className="badge badge-info py-5 text-lg">Number of students: {num_students}</div>          
+          <div className="badge badge-info bg-[#28A745] text-white py-5 text-lg">Number of students: {num_students}</div>          
         </div>
       </div>
     </div>

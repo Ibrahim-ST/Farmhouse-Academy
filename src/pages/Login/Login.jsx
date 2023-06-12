@@ -73,13 +73,13 @@ const Login = () => {
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input type="email" name="email" placeholder="email" className="input input-bordered" />
+                                <input type="email" name="email" placeholder="Email" className="input input-bordered" />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type={showPassword ? 'text' : 'password'} name="password" placeholder="password" className="input input-bordered" />
+                                <input type={showPassword ? 'text' : 'password'} name="password" placeholder="Password" className="input input-bordered" />
                                 <span className='absolute top-44 left-80 ' onClick={togglePassword}>
                                 {showPassword?<FaEyeSlash></FaEyeSlash> :<FaEye></FaEye>}
                                 </span> 

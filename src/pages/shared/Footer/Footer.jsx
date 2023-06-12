@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-between">
             <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mb-6">
-              <h3 className="text-lg font-bold mb-4">About Us</h3>
+              <h3 className="text-lg font-bold mb-4 text-[#28A745]">About Us</h3>
               <p className="text-sm">
                 At Your Football Academia, we are passionate about nurturing the
                 next generation of football stars. Our dedicated team of coaches
@@ -32,7 +32,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mb-6">
-              <h3 className="text-lg font-bold mb-4">Quick Links</h3>
+              <h3 className="text-lg font-bold mb-4 text-[#28A745]">Quick Links</h3>
               <ul className="text-sm space-y-2">
                 <li>
                   <a href="#">Home</a>
@@ -50,7 +50,7 @@ const Footer = () => {
                   <a href="#">Contact</a>
                 </li>
               </ul>
-              <h3 className="text-lg font-bold mt-8">Social Links</h3>
+              <h3 className="text-lg font-bold mt-6 mb-2 text-[#28A745]">Social Links</h3>
               <div className="flex gap-4">
                 <a href="https://www.facebook.com/ibrahim.siddiqueee"><FaFacebook  className="text-[#82D135]" size={60}/>
                 </a>
@@ -62,7 +62,7 @@ const Footer = () => {
             </div>
             <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mb-6">
               <img src="logo.png" className="w-16" alt="" />
-              <h3 className="text-2xl font-bold  mb-4">Farmhouse Academy </h3>
+              <h3 className="text-3xl font-bold text-[#28A745]  mb-4">Farmhouse Academy </h3>
               <p className="text-sm">123 Main Street, City</p>
               <p className="text-sm">info@example.com</p>
               <p className="text-sm">+1 234 567 890</p>
