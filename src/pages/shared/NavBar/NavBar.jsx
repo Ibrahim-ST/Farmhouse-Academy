@@ -25,7 +25,7 @@ const NavBar = () => {
                         </ul>
                     </div>
                     <img className='w-10' src={logo} alt="" />
-                    <a className="btn btn-ghost normal-case text-xl  hover: ">Farmhouse Academy</a>
+                    <Link className=" mx-2 normal-case text-xl  hover: ">Farmhouse Academy</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">

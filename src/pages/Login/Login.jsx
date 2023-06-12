@@ -1,10 +1,14 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import SocialLogin from '../shared/SocialLogin/SocialLogin';
 
 const Login = () => {
     return (
         <>
+        <Helmet>
+        <title>Login | Farmhouse Academy</title>
+        </Helmet>
          <div className="hero min-h-screen bg-[#28a745] text-white">
                 <div className="hero-content flex-col md:flex-row">
                     <div className="md:w-1/2 text-center lg:text-left">
@@ -43,7 +47,7 @@ const Login = () => {
                                 <input disabled={false} className="btn bg-[#28a745] hover:bg-[#25d84f]" type="submit" value="Login" />
                             </div>
                         </form>
-                        <p className='text-center text-black'><small>New Here? <Link to="/signup">Create an account</Link> </small></p>
+                        <p className='text-center text-[#28a745]'><small>New Here? <Link to="/signup">Create an account</Link> </small></p>
                         <SocialLogin></SocialLogin>
                     </div>
                 </div>
