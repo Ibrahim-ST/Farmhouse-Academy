@@ -1,6 +1,6 @@
 import React from "react"; 
 
-const Cover = ({ image }) => {
+const Cover = ({ image, title }) => {
   return (
     <div>
       <div
@@ -10,7 +10,7 @@ const Cover = ({ image }) => {
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-md">
-            <button className="btn btn-outline bg-slate-100 border-0 border-b-4 border-[#28A745] mt-96 ">See All classes</button>
+            <button className="btn btn-outline bg-slate-100 border-0 border-b-4 border-[#28A745] mt-96 ">See All {title}</button>
           </div>
         </div>
       </div>

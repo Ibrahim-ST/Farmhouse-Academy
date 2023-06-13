@@ -3,6 +3,7 @@ import Cover from "../shared/Cover/Cover";
 import coach from "../../assets/instructors/coach.png";
 import SectionTitle from "../../components/SectionTitle";
 import InstructorCard from "../shared/InstructorCard/InstructorCard";
+import SingleInstructor from "./SingleInstructor";
 
 const Instructors = () => {
   const [instructors, setInstructors] = useState();
@@ -17,16 +18,16 @@ const Instructors = () => {
   console.log(instructors);
   return (
     <div>
-      <Cover image={coach}></Cover>
+      <Cover image={coach} title="classes"></Cover>
       <div className="my-4">
       <SectionTitle heading="All Instructors"></SectionTitle>
 
       <div className="grid md:grid-cols-3 gap-4 items-center justify-items-center">
         {instructors?.map((instructor) => (
-          <InstructorCard
+          <SingleInstructor
             key={instructor._id}
             instructor={instructor}
-          ></InstructorCard>
+          ></SingleInstructor>
         ))}
       </div> 
     </div>
