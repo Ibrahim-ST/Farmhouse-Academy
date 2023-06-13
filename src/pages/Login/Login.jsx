@@ -40,9 +40,21 @@ const Login = () => {
             })
             .catch(error => {
                 const msg = error.message;
+                console.log(msg)
                 if(msg.includes('auth/wrong-password')){
                     Swal.fire({
                         title: 'Wrong Credential.',
+                        showClass: {
+                            popup: 'animate__animated animate__fadeInDown'
+                        },
+                        hideClass: {
+                            popup: 'animate__animated animate__fadeOutUp'
+                        }
+                    });
+                }
+                else if (msg.includes('auth/user-not-found')){
+                    Swal.fire({
+                        title: 'User not found.',
                         showClass: {
                             popup: 'animate__animated animate__fadeInDown'
                         },
