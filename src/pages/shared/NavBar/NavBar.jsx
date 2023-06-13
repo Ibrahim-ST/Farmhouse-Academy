@@ -1,11 +1,13 @@
 import React, { useContext } from 'react';
+import { FaShoppingCart } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import logo from '../../../assets/logo.png'
+import useCart from '../../../hooks/useCart';
 import { AuthContext } from '../../../providers/AuthProvider';
 const NavBar = () => {
     const { user, logOut } = useContext(AuthContext);
-    console.log(user?.displayName);
-    console.log(user?.photoURL);
+    const [cart] = useCart();
+
     const handleLogOut = () => {
         logOut()
         .then(() => { })
@@ -16,6 +18,14 @@ const NavBar = () => {
         <li><Link to="/instructors">Instructors</Link></li> 
         <li><Link to="/classes">Classes</Link></li> 
         <li><Link to="/">Dashboard</Link></li> 
+
+        <li>
+            <Link to="/dashboard/mycart"> 
+                    <FaShoppingCart></FaShoppingCart>
+                    <div className="badge badge-secondary">+{cart?.length || 0}</div>
+               
+            </Link>
+        </li>
         
         {
             user ? <>                 
@@ -29,7 +39,7 @@ const NavBar = () => {
     </>
     return (
         <div>
-             <div className="navbar fixed z-10 bg-opacity-30 max-w-screen-xl bg-black text-white ">
+             <div className="navbar fixed z-10 bg-opacity-0 max-w-screen-xl bg-black text-white ">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
