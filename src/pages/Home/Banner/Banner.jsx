@@ -10,7 +10,8 @@ import img4 from "../../../assets/Banner/4.jpg";
 const Banner = () => {
   const bannerText = (
     <>
-      <h3 className="text-center uppercase mb-40 -mt-[600px] h-full text-6xl font-extrabold font-sans text-white w-1/2 mx-auto">
+      <h3 className="text-center uppercase mb-40 -mt-48 md:-mt-[600px] h-full 
+      text-2xl md:text-6xl font-extrabold font-sans text-white w-1/2 mx-auto">
         Ignite Your <span className="text-orange-500">Passion</span>: <br />{" "}
         Thrive in the <br />
         <span className="text-orange-500">
