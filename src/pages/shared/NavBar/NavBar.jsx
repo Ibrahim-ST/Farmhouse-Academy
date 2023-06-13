@@ -22,7 +22,7 @@ const NavBar = () => {
         <li>
             <Link to="/dashboard/mycart"> 
                     <FaShoppingCart></FaShoppingCart>
-                    <div className="badge badge-secondary">+{cart?.length || 0}</div>
+                    <div className="badge badge-success text-white p-3 bg-[#173931]">+{cart?.length || 0}</div>
                
             </Link>
         </li>
