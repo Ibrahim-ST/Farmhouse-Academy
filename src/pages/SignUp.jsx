@@ -16,21 +16,29 @@ const SignUp = () => {
     watch,
   } = useForm();
 
-  const { createUser, updateUserProfile } = useContext(AuthContext);
+  const { createUser, updateUserProfile, logOut } = useContext(AuthContext);
   const navigate = useNavigate();
   const onSubmit = (data) => {
     createUser(data.email, data.password)
       .then((result) => {
         const loggedUser = result.user;
         console.log(loggedUser);
-        Swal.fire({
-          position: "top-center",
-          icon: "success",
-          title: "User created successfully.",
-          showConfirmButton: false,
-          timer: 1500,
-        });
-        navigate("/");
+        updateUserProfile(data.name, data.photoURL)
+        .then(() => {
+          logOut()
+          .then(() => { 
+          navigate("/login");
+        })
+          console.log('User profile updated');
+          Swal.fire({
+            position: "top-center",
+            icon: "success",
+            title: "User created successfully.",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        })
+        .catch(error => console.log(error));        
       })
       .catch((error) => console.log(error));
   };

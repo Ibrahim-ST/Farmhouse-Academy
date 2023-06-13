@@ -18,7 +18,7 @@ const Gallery = () => {
     <div title="scroll in the middle of the image for more">
       <div className="w-2/3 mx-auto">
         <SectionTitle heading="The Academy Gallery"></SectionTitle>
-        <div className="h-[450px]  carousel carousel-vertical rounded-box">
+        <div className="h-[450px] hover:scale-110 hover:transform-cpu carousel carousel-vertical rounded-box">
           <div className="carousel-item h-full ">
             <img
               src="https://contents.mediadecathlon.com/p1414902/k$f1c7539e031653fd23b374f4080676a4/1800x0/2854pt2515/4171xcr2125/Les-qualit%25C3%25A9s-pour-%25C3%25AAtre-un-bon-entra%25C3%25AEneur.jpg?format=auto"
