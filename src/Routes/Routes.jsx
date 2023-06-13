@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
+import Dashboard from "../Layout/Dashboard";
 import Main from "../Layout/Main";
 import Classes from "../pages/Classes/Classes";
+import MyCourses from "../pages/Dashboard/MyCourses/MyCourses";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Home from "../pages/Home/Home/Home";
 import Instructors from "../pages/Instructors/Instructors";
@@ -35,4 +37,14 @@ export const router = createBrowserRouter([
     ],
     errorElement: <ErrorPage></ErrorPage>,
   },
+  {
+    path: "dashboard",
+    element: <Dashboard></Dashboard>,
+    children: [
+      {
+        path: 'mycart',
+        element: <MyCourses></MyCourses>
+      }
+    ]
+  }
 ]);

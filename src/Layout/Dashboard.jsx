@@ -1,4 +1,6 @@
 import React from "react";
+import { FaCalendarAlt, FaFutbol, FaHome, FaMale, FaShoppingCart, FaWallet } from "react-icons/fa";
+import { NavLink, Outlet } from "react-router-dom";
 
 const Dashboard = () => {
   return (
@@ -13,17 +15,22 @@ const Dashboard = () => {
           >
             Open drawer
           </label>
+          <Outlet></Outlet>
+
         </div>
         <div className="drawer-side">
           <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-          <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content">
+          <ul className="menu p-4 w-80 h-full bg-[#FFAF6E] text-base-content">
             {/* Sidebar content here */}
-            <li>
-              <a>Sidebar Item 1</a>
-            </li>
-            <li>
-              <a>Sidebar Item 2</a>
-            </li>
+            <li><NavLink to="/dashboard/home"><FaHome></FaHome> User Home </NavLink></li>
+            <li><NavLink to="/dashboard/mycart"><FaShoppingCart></FaShoppingCart> My Courses </NavLink></li>
+            <li><NavLink to="/dashboard/reservation"><FaCalendarAlt></FaCalendarAlt> Reservation</NavLink></li>
+            <li><NavLink to="/dashboard/history"><FaWallet></FaWallet> Payment History  </NavLink></li>
+            <div className="divider"></div>
+            <li><NavLink to="/"><FaHome></FaHome> Home</NavLink></li> 
+            <li><NavLink to="/instructors"><FaMale></FaMale> Instructors</NavLink></li> 
+            <li><NavLink to="/classes"><FaFutbol></FaFutbol> Classes</NavLink></li>
+            
           </ul>
         </div>
       </div>
