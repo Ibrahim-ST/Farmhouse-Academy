@@ -19,13 +19,14 @@ const NavBar = () => {
         <li><Link to="/classes">Classes</Link></li> 
         <li><Link to="/">Dashboard</Link></li> 
 
-        <li>
-            <Link to="/dashboard/mycart"> 
+        {user &&
+            <li>
+            <Link to="/dashboard"> 
                     <FaShoppingCart></FaShoppingCart>
-                    <div className="badge badge-success text-white p-3 bg-[#173931]">+{cart?.length || 0}</div>
-               
+                    <div className="badge badge-success text-white p-3 bg-[#173931]">+{cart?.length || 0}</div>           
             </Link>
-        </li>
+            </li>        
+        }
         
         {
             user ? <>                 

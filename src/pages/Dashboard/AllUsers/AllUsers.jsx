@@ -3,12 +3,16 @@ import { useQuery } from "@tanstack/react-query";
 import { Helmet } from "react-helmet-async";
 import { FaTrashAlt, FaUserShield } from "react-icons/fa";
 import Swal from "sweetalert2";
+import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import SectionTitle from "../../../components/SectionTitle";
 
 const AllUsers = () => {
-  const { data: users = [], refetch } = useQuery(["users"], async () => {
-    const res = await fetch("http://localhost:5000/users");
-    return res.json();
-  });
+   
+  const [axiosSecure] = useAxiosSecure();
+    const { data: users = [], refetch } = useQuery(['users'], async () => {
+        const res = await axiosSecure.get('/users')
+        return res.data;
+    })
 
   const handleMakeAdmin = user =>{
     fetch(`http://localhost:5000/users/admin/${user._id}`, {
@@ -38,6 +42,7 @@ const handleDelete = user => {
       <Helmet>
         <title>All users | Farmhouse Academy</title>
       </Helmet>
+      
       <h3 className="text-3xl font-semibold my-4">
         Total Users: {users.length}
       </h3>
@@ -61,7 +66,8 @@ const handleDelete = user => {
                                 <td>{user.email}</td>
                                 <td>{ user.role === 'admin' ? 'admin' :
                                     <button onClick={() => handleMakeAdmin(user)} className="btn btn-ghost bg-orange-600  text-white"><FaUserShield></FaUserShield></button> 
-                                    }</td>
+                                    }
+                                    </td>
                                 <td><button onClick={() => handleDelete(user)} className="btn btn-ghost bg-red-600  text-white"><FaTrashAlt></FaTrashAlt></button></td>
                             </tr>)
                         }

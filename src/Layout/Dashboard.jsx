@@ -1,11 +1,15 @@
 import React from "react";
 import { FaBook, FaCalendarAlt, FaFutbol, FaHome, FaMale, FaShoppingCart, FaUsers, FaUtensils, FaWallet } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
+import SectionTitle from "../components/SectionTitle";
+import useAdmin from "../hooks/useAdmin";
 import useCart from "../hooks/useCart";
 
 const Dashboard = () => {
     const [cart] = useCart();
-    const isAdmin = true;
+    // const isAdmin = true;
+    const [isAdmin] = useAdmin();
+
 
   return (
     <div>
@@ -18,7 +22,10 @@ const Dashboard = () => {
             className="btn btn-primary drawer-button lg:hidden"
           >
             Open drawer
-          </label>
+          </label> 
+          <SectionTitle
+          heading={`${isAdmin?'Admin': 'Student'} Dashboard`}
+          ></SectionTitle>
           <Outlet></Outlet>
 
         </div>
@@ -28,19 +35,22 @@ const Dashboard = () => {
             {/* Sidebar content here */}
             {
                 isAdmin? <>
-                    <li><NavLink to="/dashboard/adminhome"><FaHome></FaHome> Admin Home</NavLink></li>
-                    <li><NavLink to="/dashboard/addItem"> <FaUtensils></FaUtensils> Add an Item</NavLink></li>
-                    <li><NavLink to="/dashboard/manageitems"><FaWallet></FaWallet> Manage Items</NavLink></li>
+                    <li><NavLink to="/dashboard/"><FaHome></FaHome> Admin Home</NavLink></li>
+                    <li><NavLink to="/dashboard/addClass"> <FaUtensils></FaUtensils> Add a Class</NavLink></li>
+                   {/*  <li>
+                    <NavLink to="/dashboard/mycart"><FaShoppingCart></FaShoppingCart> My Courses <span className="badge badge-success text-white p-3 bg-[#173931]">+{cart?.length || 0}</span>
+                    </NavLink>                
+                     </li> */}
                     <li><NavLink to="/"><FaBook></FaBook> Manage Bookings(not implemented)</NavLink></li>
                     <li><NavLink to="/dashboard/allusers"><FaUsers></FaUsers> All Users</NavLink></li>
                 </> : 
                 <>
-                <li><NavLink to="/dashboard/home"><FaHome></FaHome> User Home </NavLink></li>
+                 
                 <li>
                 <NavLink to="/dashboard/mycart"><FaShoppingCart></FaShoppingCart> My Courses <span className="badge badge-success text-white p-3 bg-[#173931]">+{cart?.length || 0}</span>
                  </NavLink>                
                 </li>
-                <li><NavLink to="/dashboard/reservation"><FaCalendarAlt></FaCalendarAlt> Reservation</NavLink></li>
+                <li><NavLink to="/dashboard/reservation"><FaCalendarAlt></FaCalendarAlt> My Enrolled Courses</NavLink></li>
                 <li><NavLink to="/dashboard/history"><FaWallet></FaWallet> Payment History  </NavLink></li>
                 </>
             }

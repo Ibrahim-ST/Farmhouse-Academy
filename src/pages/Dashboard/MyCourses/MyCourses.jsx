@@ -3,13 +3,14 @@ import { Helmet } from "react-helmet-async";
 import { FaTrashAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import SectionTitle from "../../../components/SectionTitle";
 import useCart from "../../../hooks/useCart";
 
 const MyCourses = () => {
   const [cart, refetch] = useCart();
   console.log(cart);
 
-  const total = cart.reduce((sum, item) => item.price + sum, 0);
+  const total = cart?.reduce((sum, item) => item.price + sum, 0);
 
   const handleDelete = (item) => {
     Swal.fire({
@@ -40,7 +41,7 @@ const MyCourses = () => {
     <div className="w-full px-8">
       <Helmet>
         <title>My Courses | Farmhouse Academy</title>
-      </Helmet>
+      </Helmet> 
       <div className="uppercase font-semibold h-[60px] flex justify-evenly items-center gap-4">
         <h3 className="text-3xl">Total Courses: {cart.length}</h3>
         <h3 className="text-3xl">Total Price: ${total}</h3>

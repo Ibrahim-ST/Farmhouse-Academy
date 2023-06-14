@@ -1,16 +1,17 @@
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
-import useAuth from './useAuth';
+import { useNavigate } from 'react-router-dom'; 
+import { AuthContext } from '../providers/AuthProvider';
 
-const axiosSecure = axios.create({
-  baseURL: 'https://bistro-boss-server-fawn.vercel.app', 
-});
+
 
 const useAxiosSecure = () => {
-  const { logOut } = useAuth(); 
+  const { logOut } = useContext(AuthContext) ;
   const navigate = useNavigate(); 
-
+  
+  const axiosSecure = axios.create({
+    baseURL: 'http://localhost:5000', 
+  });
   useEffect(() => {
     axiosSecure.interceptors.request.use((config) => {
       const token = localStorage.getItem('access-token');
@@ -30,7 +31,7 @@ const useAxiosSecure = () => {
         return Promise.reject(error);
       }
     );
-  }, [logOut, navigate]);
+  }, [logOut, navigate, axiosSecure]);
 
   return [axiosSecure];
 };
