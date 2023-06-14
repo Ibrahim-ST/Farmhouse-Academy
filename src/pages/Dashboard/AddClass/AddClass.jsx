@@ -5,11 +5,10 @@ import useAuth from "../../../hooks/useAuth";
 
 const AddClass = () => {
   const { user } = useAuth();
-  console.log("me", user.displayName);
   const { register, handleSubmit, reset } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
+    console.log("mydata", data);
   };
   return (
     <div className="w-full px-10">
@@ -50,40 +49,47 @@ const AddClass = () => {
             />
           </div>
         </div>
-        <div className="form-control w-full ">
+        <div className="flex gap-2 my-4">
+          <div className="form-control w-full ">
+            <label className="label">
+              <span className="label-text font-semibold">Available Seat*</span>
+            </label>
+            <input
+              type="number"
+              {...register("available_seat", { required: true })}
+              placeholder="Type here"
+              className="input input-bordered w-full "
+            />
+          </div>
+          <div className="form-control w-full ">
+            <label className="label">
+              <span className="label-text font-semibold">Price*</span>
+            </label>
+            <input
+              type="number"
+              {...register("price", { required: true })}
+              placeholder="Type here"
+              className="input input-bordered w-full "
+            />
+          </div>
+        </div>
+        <div className="form-control w-full my-4">
           <label className="label">
-            <span className="label-text font-semibold">Available Seat*</span>
+            <span className="label-text">Class Image*</span>
           </label>
           <input
-            type="number"
-            {...register("available_seat", { required: true })}
-            placeholder="Type here"
-            className="input input-bordered w-full "
+            type="file"
+            {...register("image", { required: true })}
+            className="file-input file-input-bordered w-full "
           />
         </div>
-        <div className="form-control w-full ">
-          <label className="label">
-            <span className="label-text font-semibold">Price*</span>
-          </label>
+        <div className="text-center">
           <input
-            type="number"
-            {...register("price", { required: true })}
-            placeholder="Type here"
-            className="input input-bordered w-full "
+            className="btn btn-outline bg-slate-100 border-0 border-b-4 border-[#28A745] mb-4"
+            type="submit"
+            value="Add Class"
           />
         </div>
-        <div className="form-control w-full mb-4">
-          <label className="label">
-            <span className="label-text font-semibold">Class Image*</span>
-          </label>
-          <input
-            type="text"
-            placeholder="Class Image"
-            {...register("image", { required: true, maxLength: 120 })}
-            className="input input-bordered w-full "
-          />
-        </div>
-        <input className="btn btn-sm my-4" type="submit" value="Add Class" />
       </form>
     </div>
   );
