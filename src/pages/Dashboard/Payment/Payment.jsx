@@ -12,7 +12,7 @@ const Payment = () => {
     const price = parseFloat(total.toFixed(2))
     return (
         <div>
-            <h2 className="text-3xl"> Teka o teka tumi uira uira aso...</h2>
+            <h2 className="text-3xl">Please enter valid information to pay </h2>
             <Elements stripe={stripePromise}>
                 <CheckoutForm cart={cart} price={price}></CheckoutForm>
             </Elements>
