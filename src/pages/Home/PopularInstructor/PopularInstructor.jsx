@@ -8,7 +8,7 @@ import InstructorCard from "../../shared/InstructorCard/InstructorCard";
 const PopularInstructor = () => {
   const [instructors, setInstructors] = useState();
   useEffect(() => {
-    fetch("http://localhost:5000/instructors")
+    fetch("https://farmhouse-academy-server.vercel.app/instructors")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

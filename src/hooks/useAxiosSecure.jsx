@@ -10,7 +10,7 @@ const useAxiosSecure = () => {
   const navigate = useNavigate(); 
   
   const axiosSecure = axios.create({
-    baseURL: 'http://localhost:5000', 
+    baseURL: 'https://farmhouse-academy-server.vercel.app', 
   });
   useEffect(() => {
     axiosSecure.interceptors.request.use((config) => {

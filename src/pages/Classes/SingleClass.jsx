@@ -25,7 +25,7 @@ const SingleClass = ({ singleClass }) => {
   const handleSelect = (item) => {
     if (user && user.email) {
       const cartItem = { courseId: _id,class_name,image,price,email: user.email,};
-      fetch("http://localhost:5000/carts", {
+      fetch("https://farmhouse-academy-server.vercel.app/carts", {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -64,7 +64,7 @@ const SingleClass = ({ singleClass }) => {
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
       <figure>
-        <img src={image} alt="Shoes" />
+        <img src={image} alt="Shoes" className="h-60 w-full"/>
       </figure>
       <div className="card-body">
         <h2 className="card-title">
