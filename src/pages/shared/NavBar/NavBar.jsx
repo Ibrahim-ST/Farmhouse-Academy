@@ -17,15 +17,17 @@ const NavBar = () => {
         <li><Link to="/">Home</Link></li> 
         <li><Link to="/instructors">Instructors</Link></li> 
         <li><Link to="/classes">Classes</Link></li> 
-        <li><Link to="/dashboard">Dashboard</Link></li> 
 
         {user &&
+            <>
+            <li><Link to="/dashboard">Dashboard</Link></li> 
             <li>
             <Link to="/dashboard"> 
                     <FaShoppingCart></FaShoppingCart>
                     <div className="badge badge-success text-white p-3 bg-[#173931]">+{cart?.length || 0}</div>           
             </Link>
-            </li>        
+            </li>   
+            </>     
         }
         
         {
