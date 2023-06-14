@@ -1,15 +1,25 @@
-import React from "react";
-import { FaBook, FaCalendarAlt, FaFutbol, FaHome, FaMale, FaShoppingCart, FaUsers, FaUtensils, FaWallet } from "react-icons/fa";
+import React, { useContext } from "react";
+import { FaBook, FaCalendarAlt, FaFutbol, FaHome, FaMale, FaPlus, FaShoppingCart, FaSistrix, FaUsers, FaUserSlash, FaUtensils, FaWallet } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
 import SectionTitle from "../components/SectionTitle";
 import useAdmin from "../hooks/useAdmin";
 import useCart from "../hooks/useCart";
+import useInstructor from "../hooks/useInstructor";
+import { AuthContext } from "../providers/AuthProvider";
 
 const Dashboard = () => {
     const [cart] = useCart();
     // const isAdmin = true;
     const [isAdmin] = useAdmin();
+    const [isInstructor] = useInstructor();
+    console.log('THIsssssssss',isAdmin, isInstructor);
+    const { logOut } = useContext(AuthContext); 
 
+    const handleLogOut = () => {
+        logOut()
+        .then(() => { })
+        .catch(error => console.log(error));
+    }
 
   return (
     <div>
@@ -24,7 +34,7 @@ const Dashboard = () => {
             Open drawer
           </label> 
           <SectionTitle
-          heading={`${isAdmin?'Admin': 'Student'} Dashboard`}
+          heading={`${isAdmin?'Admin': isInstructor? 'Instructor':'Student'} Dashboard`}
           ></SectionTitle>
           <Outlet></Outlet>
 
@@ -35,15 +45,19 @@ const Dashboard = () => {
             {/* Sidebar content here */}
             {
                 isAdmin? <>
-                    <li><NavLink to="/dashboard/"><FaHome></FaHome> Admin Home</NavLink></li>
-                    <li><NavLink to="/dashboard/addClass"> <FaUtensils></FaUtensils> Add a Class</NavLink></li>
+                    <li><NavLink to="/dashboard/"><FaHome></FaHome> Admin Home</NavLink></li>                    
                    {/*  <li>
                     <NavLink to="/dashboard/mycart"><FaShoppingCart></FaShoppingCart> My Courses <span className="badge badge-success text-white p-3 bg-[#173931]">+{cart?.length || 0}</span>
                     </NavLink>                
-                     </li> */}
-                    <li><NavLink to="/"><FaBook></FaBook> Manage Bookings(not implemented)</NavLink></li>
-                    <li><NavLink to="/dashboard/allusers"><FaUsers></FaUsers> All Users</NavLink></li>
+                     </li> */} 
+                    <li><NavLink to="/dashboard/allusers"><FaUsers></FaUsers> Manage Users</NavLink></li>
+                    <li><NavLink to="/dashboard/"><FaFutbol></FaFutbol> Manage Classes</NavLink></li>
                 </> : 
+                isInstructor? <> 
+                <li><NavLink to="/dashboard/"><FaHome></FaHome> Instructor Home</NavLink></li> 
+                <li><NavLink to="/dashboard/addClass"> <FaPlus></FaPlus> Add a Class</NavLink></li>
+                <li><NavLink to="/dashboard/myclass"> <FaSistrix></FaSistrix> My Classes</NavLink></li>
+                </> :
                 <>
                  
                 <li>
@@ -62,6 +76,7 @@ const Dashboard = () => {
             <li><NavLink to="/"><FaHome></FaHome> Home</NavLink></li> 
             <li><NavLink to="/instructors"><FaMale></FaMale> Instructors</NavLink></li> 
             <li><NavLink to="/classes"><FaFutbol></FaFutbol> Classes</NavLink></li>
+            <li onClick={handleLogOut}><NavLink to="/classes"><FaUserSlash></FaUserSlash> LogOut</NavLink></li>
             
           </ul>
         </div>

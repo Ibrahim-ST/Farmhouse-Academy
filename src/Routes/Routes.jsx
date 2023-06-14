@@ -12,6 +12,7 @@ import SignUp from "../pages/SignUp";
 import PrivateRoute from "./PrivateRoute";
 import AddClass from "../pages/Dashboard/AddClass/AddClass";
 import AdminRoute from "./AdminRoute";
+import InstructorRoute from "./InstructorRoute";
 
 export const router = createBrowserRouter([
   {
@@ -55,7 +56,7 @@ export const router = createBrowserRouter([
       },
       {
         path: 'addClass',
-        element: <AdminRoute><AddClass></AddClass></AdminRoute>
+        element: <InstructorRoute><AddClass></AddClass></InstructorRoute>
       }
 
     ]
